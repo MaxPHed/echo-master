@@ -15,4 +15,6 @@ jobs:
             - name: Build app
               run: dotnet build --no-restore
             - name: Print Message
-              run: echo "Everything is ok"
+              run: echo "Running tests now..."
+            - name: Run test
+              run: dotnet test
