@@ -18,3 +18,9 @@ jobs:
               run: echo "Running tests now..."
             - name: Run test
               run: dotnet test
+    print_success_message:
+        runs-on: ubuntu_latest
+        needs: test-project
+        steps:
+            - name: Print successmessage
+              run: echo "Tests succesful"
