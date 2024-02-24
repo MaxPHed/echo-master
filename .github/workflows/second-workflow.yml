@@ -22,5 +22,12 @@ jobs:
         runs-on: ubuntu_latest
         needs: test_project
         steps:
-            - name: Print successmessage
+            - name: Print success message
               run: echo "Tests succesful"
+    print_fail_message:
+        runs-on: ubuntu_latest
+        needs: test_project
+        if: failure()
+        steps:
+            - name: Print fail message
+              run: echo "Tests failed"
